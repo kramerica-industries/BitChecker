@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Primary.master.cs" Inherits="Bitchecker.Primary" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+            body 
+            { 
+            	background-image: url(Resources/Images/background.png); 
+            	background-repeat:repeat-y; 
+            	background-position: center;
+            	background-color: #001E7D
+            }
+            
+            h1 { margin:0px; padding:0px; }
+            h1,p { font-family: Garamond, Georgia, Serif; }
+            
+            a.bigButton { display:block;margin:0px auto; padding:20px; width:300px; text-align:center;border:3px double #AAA;background-color:#0069A3;color:#FFF;font-weight:bold;font-size:20px;font-family:Trebuchet MS,Tahoma,Verdana,Sans-Serif;text-decoration: none;}
+    </style>
+</head>
+<body>
+    <div style="width:704px;margin:25px auto;">
+        <div style="margin:50px 0px 20px 0px;text-align:center;"><a href="Default.aspx"><img src="Resources/Images/logo.png" alt="bitCHECKER (beta)" border="0" /></a></div>
+        <div style="height:25px;background-image: url(Resources/Images/box-top.png);"></div>
+        <div style="padding:10px 25px;background-image: url(Resources/Images/box-middle.png);background-color:#FFF;">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+
+        </div>
+        <div style="margin-bottom:-15px; text-align:center; background-image: url(Resources/Images/box-middle.png);background-color:#FFF;font-size:90%;">
+            
+            v<%=typeof(Bitchecker.Primary).Assembly.GetName().Version.ToString() %> 
+            | &copy; <%=DateTime.Now.Year %> BitChecker
+            | <a style="color:inherit;text-decoration:none" href="Contact.aspx">contact us</a> 
+        </div>
+        <div style="height:25px;background-image: url(Resources/Images/box-bottom.png);"></div>
+    </div>
+
+</body>
+</html>
+
